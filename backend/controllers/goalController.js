@@ -11,6 +11,7 @@ const getGoals = (req, res) => {
 // @acces   Private
 
 const setGoal = (req, res) => {
+  console.log(JSON.stringify(req.body));
   res.status(200).json({ message: 'Success! Set Goal!' });
 };
 
