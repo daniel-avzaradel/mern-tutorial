@@ -7,7 +7,14 @@ const getGoal = (req, res) => {
 };
 
 const newGoal = (req, res) => {
-  res.status(201).json({ message: 'Goal Saved!' });
+  if (!req.body.goal) {
+    res.status(400);
+    throw new Error('Please add a text field');
+  }
+
+  res.status(201).json({
+    message: 'Goal Saved!',
+  });
 };
 
 const updateGoal = (req, res) => {
