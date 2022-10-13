@@ -14,7 +14,7 @@ router.route('/').get(controller.getGoals).post(controller.newGoal);
 router
   .route('/:id')
   .get(controller.getGoal)
-  .post(controller.updateGoal)
+  .put(controller.updateGoal)
   .delete(controller.deleteGoal);
 
 module.exports = router;
